@@ -10,6 +10,8 @@
         ==> 0 <= \result < len && arr[\result] == x;
 
     ensures (\forall integer i; 0 <= i < len ==> arr[i] != x)
-        ==> \result == -1; assigns \nothing;
+        ==> \result == -1; 
+
+    assigns \nothing;
 */
 int find_array(int *arr, int len, int x);
