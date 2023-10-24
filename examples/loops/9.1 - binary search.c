@@ -1,5 +1,8 @@
 /*@
-    requires \valid(arr+(0..(len-1)));
+    requires len >= 0;
+    requires \valid_read(arr+(0..(len-1)));
+    requires \forall integer i, j;
+        0 <= i <= j < len ==> arr[i] <= arr[j];
 */
 int find_array(int *arr, int len, int x)
 {
